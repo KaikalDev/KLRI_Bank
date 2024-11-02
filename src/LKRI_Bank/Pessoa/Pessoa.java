@@ -1,4 +1,4 @@
-package LKRI_Bank;
+package LKRI_Bank.Pessoa;
 
 import java.util.Objects;
 
@@ -21,8 +21,12 @@ public class Pessoa {
         return Objects.equals(senha, this.Senha);
     }
 
-    public void setSenha(Long senha) {
-        this.Senha = senha;
+    public boolean setSenha(Long newSenha, Long Senha) {
+        if (Objects.equals(this.Senha, Senha)) {
+            this.Senha = newSenha;
+            return true;
+        }
+        return false;
     }
 
     public String getNome() {

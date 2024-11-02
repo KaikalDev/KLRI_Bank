@@ -1,6 +1,6 @@
 package LKRI_Bank.Dados.interfaces;
 
-import LKRI_Bank.Pessoa;
+import LKRI_Bank.Pessoa.Pessoa;
 
 public interface IClientesMap {
     /**

@@ -3,7 +3,7 @@ package LKRI_Bank.Contas;
 import LKRI_Bank.Dados.ContaMap;
 import LKRI_Bank.Dados.interfaces.IContaMap;
 import LKRI_Bank.Contas.Interfaces.IContaPoupanca;
-import LKRI_Bank.Pessoa;
+import LKRI_Bank.Pessoa.Pessoa;
 
 public class ContaPoupanca implements IContaPoupanca {
     private Double Saldo;

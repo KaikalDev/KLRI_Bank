@@ -1,7 +1,7 @@
 package LKRI_Bank.Dados;
 
 import LKRI_Bank.Dados.interfaces.IClientesMap;
-import LKRI_Bank.Pessoa;
+import LKRI_Bank.Pessoa.Pessoa;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -28,9 +28,10 @@ public class ClienteMap implements IClientesMap {
     public Boolean alterarSenha(Pessoa cliente, Long newSenha, Long senha) {
         Pessoa clienteOriginal = this.map.get(cliente.getCpf());
 
-        if (clienteOriginal != null && clienteOriginal.verificaSenha(senha)) {
-            clienteOriginal.setSenha(newSenha);
-            return true; /* Erro de cliente inexistet e de senha invalida*/
+        if (clienteOriginal != null) {
+            /* Erro de cliente inexistente */
+            return clienteOriginal.setSenha(senha,newSenha);
+            /* Erro de senha invalida */
         }
         return false;
 

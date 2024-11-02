@@ -1,7 +1,7 @@
 package LKRI_Bank.Contas;
 
 import LKRI_Bank.Contas.Interfaces.IContaCorrente;
-import LKRI_Bank.Pessoa;
+import LKRI_Bank.Pessoa.Pessoa;
 
 public class ContaCorrente implements IContaCorrente {
     private Double Saldo;
